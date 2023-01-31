@@ -14,7 +14,7 @@ enemies = []
 enemies << player1 = Player.new("Pif")
 enemies << player2 = Player.new("Hercule")
 
-while user.life_points >0 && (player1.life_points > 0 || player2.life_points >0)
+while user.life_points > 0 && (player1.life_points > 0 || player2.life_points > 0)
     print user.show_state
     puts "Press enter"
     input = gets.chomp
@@ -44,11 +44,22 @@ while user.life_points >0 && (player1.life_points > 0 || player2.life_points >0)
     puts "Press enter"
     input = gets.chomp
 
-    puts "Enemies attack u"
+    
     enemies.each do |ennemy|
-        if ennemy.life_points > 0
+        if ennemy.life_points > 0 && user.life_points > 0
+            puts "Enemies attack u"
             ennemy.attacks(user)
         end
     end
 
+    puts "Press enter"
+    input = gets.chomp
+
+
+end
+
+if user.life_points > 0 && player1.life_points <= 0 && player2.life_points <= 0
+    puts "U WiN!"
+else 
+    puts "U LooSe!"
 end

@@ -21,8 +21,8 @@ class Player
     def attacks(player)
         puts "#{self.name} attacks #{player.name}!"
         rand_dmg = compute_damage
-        player.gets_damage(rand_dmg)
         puts "#{self.name} make #{rand_dmg}dmg!"
+        player.gets_damage(rand_dmg)
     end
  
     def compute_damage

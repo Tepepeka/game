@@ -24,5 +24,5 @@ while player1.life_points > 0 && player2.life_points > 0
     puts player2.show_state
 
     # Using Break Statement
-    break if player2.life_points <= 0
+    break if player1.life_points <= 0 || player2.life_points <= 0
 end

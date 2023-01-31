@@ -37,7 +37,7 @@ class HumanPlayer < Player
             if @life_points + 50 >= 100
                 return @life_points = 100
             else
-                return @life_points = @life_points + 80
+                return @life_points = @life_points + 50
             end
         else
             puts "u find a health pack @80hp"
