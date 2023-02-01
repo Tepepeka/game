@@ -21,19 +21,11 @@ while @my_game.human_player.life_points > 0 && @my_game.enemies.count > 0
     @my_game.enemies_attack
 end
 
-@my_game.end_game
+@my_game.end
 
 #binding.pry
 
 =begin
-#### b) `app_3.rb` en chef d'orchestre
-
-Maintenant tu vas compléter `app_3.rb` pour qu'il puisse coordonner le jeu.
-
-Fais commencer le jeu par l'habituel message de bienvenue, demande son nom à l'utilisateur et utilise-le pour initialiser un objet `Game` que tu vas stocker dans une variable `my_game` et rappeler tout du long de ton code.
-
-Inspire-toi du contenu de `app_2.rb` mais cette fois-ci, tu ne dois faire que des appels de méthode sur ton objet `my_game`. Il contient toute l'information du jeu en cours : le personnage de ton utilisateur et ses ennemis. Par contre tu peux mettre les `gets.chomp` directement dans le code de `app_3.rb`
-
 #### c) Quelques fonctionnalités en plus
 
 On aimerait bien que notre Fornite-like permette de combattre 10 ou 20 ennemis sur une même partie... Mais s'ils débarquent tous dès le début et s'acharnent sur notre pauvre `HumanPlayer`, même avec ses habilités spéciales il va pas durer longtemps.

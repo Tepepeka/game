@@ -74,15 +74,16 @@ class Game
             enemy.attacks(@human_player)
             else
             kill_player(ennemy)
+            end
         end
     end
 
     def clear_shell
         system('clear')
-      end
+    end
 
     def end
-        if @human_player.life_points > 0 && @enemies.empty? == false
+        if @human_player.life_points > 0 && @enemies.empty? == true
             puts "U WiN!"
         else
             puts "U LoOSe!"
