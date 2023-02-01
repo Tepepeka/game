@@ -23,7 +23,7 @@ class HumanPlayer < Player
             puts "take this weapon!"
             return @weapon_level = new_weapon_lvl
         else
-            puts "throw dat crappy weapon!"
+            puts "drop dat crappy weapon!"
             return @weapon_level
         end
     end

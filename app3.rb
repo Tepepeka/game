@@ -5,7 +5,25 @@ require_relative 'lib/game'
 require_relative 'lib/player'
 require_relative 'lib/human_player'
 
-binding.pry
+puts "ur name?"
+print "> "
+name = gets.chomp.to_s
+@my_game = Game.new(name)
+
+#@my_game loop
+
+while @my_game.human_player.life_points > 0 && @my_game.enemies.count > 0
+    @my_game.show_players
+    @my_game.menu
+    selected = gets.chomp
+    @my_game.clear_shell
+    @my_game.menu_choice(selected)
+    @my_game.enemies_attack
+end
+
+@my_game.end_game
+
+#binding.pry
 
 =begin
 #### b) `app_3.rb` en chef d'orchestre
